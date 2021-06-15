@@ -1,0 +1,10 @@
+1) D :	expected
+2) C :	 frequencies
+3) C :	 6
+4) B :	 Chi-squared
+5) C :	 f distribution
+6) B :	 hypothesis
+7) A :	 null hyouthesis
+8) A :	 Two tailed
+9) B :	 Research hypothesis
+10) A :	 np

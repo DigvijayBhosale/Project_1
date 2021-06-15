@@ -1,0 +1,28 @@
+1) 	A Commit
+	C Rollback
+	D Savepoint
+2)   	A Create
+	C Drop
+	D Alter
+3)   B SELECT NAME FROM SALES;
+4)   C authorizing Access and other control over Database
+5)   D Date,Column Alias,String
+6)   B Commit
+7)   A Parenthesis 
+8)   C Table
+9)   D All of the mentioned
+10)   A ASC
+11)   Denormalization is a technique used to access the data from higher to lower normal forms of database. It is also process of introducing redundancy into a table by incorporating data from the related tables.
+12)   A database Cursor is a control which enables traversal over the rows or records in the table. This can be viewed as a pointer to one row in a set of rows. Cursor is very much useful for traversing such as retrieval, 
+addition and removal of database records.
+13)   There are two types of subquery – Correlated and Non-Correlated.A correlated subquery cannot be considered as independent query, but it can refer the column in a table listed 
+in the FROM the list of the main query.
+A Non-Correlated sub query can be considered as independent query and the output of subquery are substituted in the main query.
+14)   Constraint can be used to specify the limit on the data type of table. Constraint can be specified while creating or altering the table statement. Sample of constraint are.
+	NOT NULL
+	CHECK
+	DEFAULT
+	UNIQUE
+	PRIMARY KEY
+	FOREIGN KEY
+15)   Auto increment keyword allows the user to create a unique number to be generated when a new record is inserted into the table. mostly use for Primary/Surrogate key.
