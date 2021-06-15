@@ -1,0 +1,22 @@
+1) select AVG(total_orders) from (SELECT shippedDate, COUNT(orderNumber) AS total_orders FROM Orders group by shippedDate);
+2) select AVG(total_orders) from (SELECT orderDate, COUNT(orderNumber) AS total_orders FROM Orders group by orderDate);
+3) select productName,MSRP from Products ORDER BY MSRP LIMIT 1;
+4) select productName from Products ORDER BY quantityInStock DESC LIMIT 1;
+5) select productName FROM OrderDetails AS OD INNER JOIN Products AS PD ON OD.productCode = PD.productCode
+	GROUP BY PD.productCode ORDER BY COUNT(orderNumber) DESC LIMIT 1; 
+6) WITH TOT_PYMT AS (SELECT customerName, SUM(amount) AS total_payment FROM 
+	Customers AS a INNER JOIN Payments b
+	ON a.customerNumber = b.customerNumber 
+	GROUP BY customerName)
+	SELECT customerName, total_payment FROM x
+	WHERE total_payment = (SELECT MAX(total_payment) FROM x);
+7) SELECT customerNumber, customerName FROM Customers 	WHERE city= "Melbourne";
+8) SELECT customerName FROM Customers WHERE customerName REGEXP ^N*;
+9) SELECT customerName FROM Customers WHERE phones REGEXP “^7.*” AND city = “Las Vegas”;
+10) SELECT customerName FROM Customers 	WHERE creditLimit < 1000 AND city IN ("Las Vegas", "Nantes", "Stavern");
+11) SELECT orderNumber FROMorderDetails WHERE quantityOrdered < 10;
+12) SELECT orderNumber	FROM Customers AS a INNER JOIN orders AS b ON a.customerNumber = b.customerNumber WHERE 
+	customerName REGEXP "^B.*";
+13) SELECT customerName FROM Orders AS a INNER JOIN Customers AS b ON a.customerNumber= b.customerNumber WHERE status= "Disputed";
+14) SELECT customerName FROM Payments INNER JOIN Customers USING (customerNumber) WHERE paymentDate = "2004-10-19" AND checkNumber REGEXP "^H.*";
+15) SELECT checkNumber FROM Payments WHERE amount > 1000;

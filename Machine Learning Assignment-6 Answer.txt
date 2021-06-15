@@ -1,0 +1,47 @@
+1) C : High R-squared value for train-set and Low R-squared value for test-set 
+2) B : Decision trees are highly prone to overfitting. 
+3) C : Random Forest 
+4) B : Sensitivity 
+5) B : Model B 
+6) A : Ridge 
+   D : Lasso 
+7)  B : Decision Tree
+    C : Random Forest
+8)  A : Pruning 
+    C : Restricting the max depth of the tree 
+9)  A : We initialize the probabilities of the distribution as 1/n, where n is the number of data-points 
+    B : A tree in the ensemble focuses more on the data points on which the previous tree was not performing well
+10)  In linear regression model R-squared on training data increases as we increase the number of predictors 
+	because as we increase the number of predictors we are adding more information to the model so the r-squared 
+	increases on the training dataset. But this can lead to overfitting of the model. To prevent the overfitting in spite of 
+	r squared we use adjusted r-squared
+11) Ridge Regression: 
+	It is technique of regularization in linear regression. It regularizes the model by using L2 regularization which 
+	tries to minimize the sum of squares of the magnitude of the coefficients along with the error. The cost 
+	function in ridge regression looks like this: 
+	Cost function= MSE+ a * (sum of square of coefficients)2
+	Where, MSE is the mean squared error. 
+	a is the regularization constant. The regularization increases with increment in a. 
+	Lasso Regression: 
+	It is also technique of regularization in linear regression. It regularizes the model by using L1 regularization 
+	which tries to minimize the sum of the magnitude of the coefficients along with the error. The cost function in 
+	lasso regression looks like this: 
+	Cost function= MSE+ a * |sum of magnitude of coefficients
+	Where, MSE is the mean squared error. a is the regularization constant. The regularization increases with increment in a.
+12) VIF: stands for Variance Inflation Factor. VIF determines the strength of the correlation between the independent features. 
+	It is predicted by taking a variable and regressing it against every other feature in the dataset. R2 value is determined to find out how well an independent feature is described by the other independent features. A high 
+	value of R2 means that the feature is highly correlated with the other features.Generally, if VIF is less than 4, the feature is acceptable to be a part of model otherwise it is dropped.
+
+13) The following are the reasons to scale the data before feeding it to train the model: The gradient descent algorithm which is used to reach the optimal solution in most of the cases, it reached 
+	the optimal solution much faster if all the features are at the same scale. That’s why scaling helps to reach the optimal solution. 
+	· If the features in the training dataset are on different scales, then during training the features with large scales will be favored
+	 over there in order to minimize the loss. That’s why we do Scaling to puts all the features on the same scale.
+14)  MSE- mean squared error. As the name suggests it is the average value of squares of the errors made by model on a dataset. 
+	MSE = (sum (Ytrue – Yexpected )2)/n 
+     R-squared. It is defined as the variance explained by the model/Total variance of the dataset. 
+	Adjusted R-squared: It takes in to account both the R-squared as well as the number of predictors in the model. 
+	That is it considers both the variance explained by the model as well as the number of predictors used by the model to explain that variance.
+15) 	Fp: False positives = 250 
+	Fn: False negatives = 50 
+	Tp: True positives = 1000 
+	Tn: True negatives = 1200 

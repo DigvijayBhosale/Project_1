@@ -1,0 +1,43 @@
+1)  B
+2)  A
+3)  C
+4)  C
+5)  D
+6)  C
+7)  C
+8)  A, D
+9)  B, D
+10)  A, B, D
+11) One hot encoding is not advisable in case the variable to be encoded has very high or very low number of categories. In case of high number of categories (say 15), one hot encoding will create 
+	14 new features if we drop the first feature, which will result in low feature importance of each of these 14 features. And in case of low number of categories (say 3 or 4), one hot encoding will 
+	create 2 to 3 number of features when drop first is true, this will result in highly correlated features and while building the model some of these features will be eliminated even if they are important.
+	To avoid these problems one can use frequency encoding or mean encoding. In frequency encoding each of the category is coded based on its frequency and in mean it is encoded as per 
+	mean.
+12 And 13 ) In case of data imbalance, we can either under sample the major class or over sample the minor class. under sampling is often unadvisable because while under sampling the problem of data loss 
+	occurs, which further results in less generic models. Also, data is quite expensive and must not be wasted. Following are some methods for dealing with data imbalance.
+	RANDOM UNDERSAMPLER: In random undersampler, the data points of major class are dropped randomly so that the data points of major class in sample becomes equal to data points of minor 
+	class. This method has a problem of data loss associated with it as most of the data is dropped while fitting it to dataset. Data is expensive and it is the key to a data science algorithm. Therefore, it 
+	is not preferred in actual practice.
+	RANDOM OVERSAMPLER: Random Oversampler makes random replications of data points of minor class by multiplying them to a random weight so as to make the number of data points of 
+	minor class become equal to data points of major class. It is less preferred over SMOTE and ADASYN because, it merely makes duplication of data and hence the model built has no added 
+	value.
+	SMOTE (Synthetic Minority Oversampling Technique): Synthetic Minority Oversampling Technique works by selecting examples that are close in the feature space, drawing a line between 
+	the examples in the feature space and drawing a new sample at a point along that line. Specifically, a random example from the minority class is first chosen. Then k of the nearest neighbors for that 
+	example are found (typically k=5). A randomly selected neighbor is chosen and a synthetic example is created at a randomly selected point between the two examples in feature space.
+	ADASYN (Adaptive Synthetic): ADASYN also generates synthetic samples as done by SMOTE. But it takes care of the distribution of the data points. It generates synthetic samples where the 
+	crowding of the minority samples is comparatively less. In this case the final dataset has similar distribution of all the samples in the feature space.
+14) Grid search CV stands for Grid Search Cross Validation. It is used for hyper parameter tuning the machine learning models. In grid search cv we make a params grid which is a dictionary containing 
+	different values of each parameter we want to tune. We also provide number of folds of cross validation and the ML model on which the grid search is being performed. Grid search fits all the 
+	possible combinations of each and every parameter mentioned in params grid with number of folds of cross validation. This gives the best possible score and hence the best parameters for the model 
+	to be fit. In this way we get the best performing set and we build our final model on these parameters. Gridsearch CV is disadvantageous over large datasets as it does a large number of fits which takes 
+	a lot of time and is computationally very heavy. But it is very helpful tool if the dataset is not very large.
+15) The evaluation metrics used to evaluate a regression model are as follows:
+	R2 Score: Also known as coefficient of determination. R2 signifies that what fraction of total variance is explained by the best fit line.
+	Adjusted R2 Score: Adjusted R2 and R2 both represent that how well the model fits the data points.But adjusted R2 penalizes the model for using more features. In case we increase the number of 
+	features in training data the R2 will increase but adjusted R2 will only increase if the new feature adds value to our model. Due to this reason adjusted R2
+	is considered as a better evaluation metric than R2. Adjusted R2 is always less than or equal to R2
+	
+	Mean Squared Error (MSE): Mean Squared error is the mean of all the squares of the distances of each data point from its predictions by the best fit line. 
+
+	Root Mean Squared Error (RMSE): RMSE is the standard deviation of the residuals (prediction errors). Residuals are a measure of how far from the regression line data points are; RMSE is a 
+	measure of how spread out these residuals are. In other words, it tells you how concentrated the data is around the line of best fit. It is nothing but square root of MSE.

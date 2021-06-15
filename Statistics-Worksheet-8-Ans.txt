@@ -1,0 +1,16 @@
+1)  a  The probability of rejecting H0 when H1 is true
+2)  b  null hypothesis
+3)  d  Type I error
+4)  b  the t distribution with n - 1 degrees of freedom
+5)  a  accepting H0 when it is false
+6)  d  a two-tailed test
+7)  b  the probability of committing a Type I error
+8)  a  the probability of committing a Type II error
+9)  a  z > za
+10)  c  the level of significance
+11)  a  level of significance
+12)  d  All of the Above
+13)  The one-way analysis of variance (ANOVA) is used to determine whether there are any statistically significant differences between the means of two or more independent (unrelated) groups (although you tend to only see it used when there are a minimum of three, rather than two groups).
+14)  There are three primary assumptions in ANOVA: The responses for each factor level have a normal population distribution. These distributions have the same variance. The data are independent.
+15)  A one-way ANOVA only involves one factor or independent variable, whereas there are two independent 
+	variables in a two-way ANOVA. In a one-way ANOVA, the one factor or independent variable analysed has three or more categorical groups. A two-way ANOVA instead compares multiple groups of two factors
